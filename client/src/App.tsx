@@ -74,14 +74,13 @@ function App() {
     }
     ref.current = true
   }, [])
-  const favicon = `${process.env.API_URL}/favicon`;
+  const favicon = process.env.API_URL ? `${process.env.API_URL}/favicon` : '/favicon.png';
   return (
     <>
       <ClientConfigContext.Provider value={config}>
         <ProfileContext.Provider value={profile}>
           <Helmet>
-            {favicon &&
-              <link rel="icon" href={favicon} />}
+            <link rel="icon" href={favicon} />
           </Helmet>
           <Switch>
             <RouteMe path="/">

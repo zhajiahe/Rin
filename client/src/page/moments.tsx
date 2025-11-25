@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react"
 import { Helmet } from 'react-helmet'
 import { client } from "../main"
 import { headersWithAuth } from "../utils/auth"
-import { siteName } from "../utils/constants"
+import { siteName, siteAvatar } from "../utils/constants"
 import { useTranslation } from "react-i18next"
 import { ProfileContext } from "../state/profile"
 import { tryInt } from "../utils/int"
@@ -167,7 +167,7 @@ export function MomentsPage() {
                 <title>{`${t('moments.title')} - ${process.env.NAME}`}</title>
                 <meta property="og:site_name" content={siteName} />
                 <meta property="og:title" content={t('moments.title')} />
-                <meta property="og:image" content={process.env.AVATAR} />
+                <meta property="og:image" content={siteAvatar} />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={document.URL} />
             </Helmet>

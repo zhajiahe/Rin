@@ -11,7 +11,7 @@ import { client } from "../main";
 import { ClientConfigContext } from "../state/config";
 import { ProfileContext } from "../state/profile";
 import { headersWithAuth } from "../utils/auth";
-import { siteName } from "../utils/constants";
+import { siteName, siteAvatar } from "../utils/constants";
 
 
 type FriendItem = {
@@ -92,7 +92,7 @@ export function FriendsPage() {
             <title>{`${t('friends.title')} - ${process.env.NAME}`}</title>
             <meta property="og:site_name" content={siteName} />
             <meta property="og:title" content={t('friends.title')} />
-            <meta property="og:image" content={process.env.AVATAR} />
+            <meta property="og:image" content={siteAvatar} />
             <meta property="og:type" content="article" />
             <meta property="og:url" content={document.URL} />
         </Helmet>

@@ -5,7 +5,7 @@ import { FeedCard } from "../components/feed_card"
 import { Waiting } from "../components/loading"
 import { client } from "../main"
 import { headersWithAuth } from "../utils/auth"
-import { siteName } from "../utils/constants"
+import { siteName, siteAvatar } from "../utils/constants"
 
 type FeedsData = {
     name: string;
@@ -59,7 +59,7 @@ export function HashtagPage({ name }: { name: string }) {
                 <title>{`${hashtag?.name} - ${process.env.NAME}`}</title>
                 <meta property="og:site_name" content={siteName} />
                 <meta property="og:title" content={hashtag?.name} />
-                <meta property="og:image" content={process.env.AVATAR} />
+                <meta property="og:image" content={siteAvatar} />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={document.URL} />
             </Helmet>

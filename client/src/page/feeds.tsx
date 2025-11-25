@@ -6,7 +6,7 @@ import { Waiting } from "../components/loading"
 import { client } from "../main"
 import { ProfileContext } from "../state/profile"
 import { headersWithAuth } from "../utils/auth"
-import { siteName } from "../utils/constants"
+import { siteName, siteAvatar } from "../utils/constants"
 import { tryInt } from "../utils/int"
 import { useTranslation } from "react-i18next";
 
@@ -71,7 +71,7 @@ export function FeedsPage() {
                 <title>{`${t('article.title')} - ${process.env.NAME}`}</title>
                 <meta property="og:site_name" content={siteName} />
                 <meta property="og:title" content={t('article.title')} />
-                <meta property="og:image" content={process.env.AVATAR} />
+                <meta property="og:image" content={siteAvatar} />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={document.URL} />
             </Helmet>

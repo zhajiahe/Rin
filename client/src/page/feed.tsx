@@ -12,7 +12,7 @@ import {client} from "../main";
 import {ClientConfigContext} from "../state/config";
 import {ProfileContext} from "../state/profile";
 import {headersWithAuth} from "../utils/auth";
-import {siteName} from "../utils/constants";
+import {siteName, siteAvatar} from "../utils/constants";
 import {timeago} from "../utils/timeago";
 import {Button} from "../components/button";
 import {Tips} from "../components/tips";
@@ -159,7 +159,7 @@ export function FeedPage({ id, TOC, clean }: { id: string, TOC: () => JSX.Elemen
           <title>{`${feed.title ?? "Unnamed"} - ${process.env.NAME}`}</title>
           <meta property="og:site_name" content={siteName} />
           <meta property="og:title" content={feed.title ?? ""} />
-          <meta property="og:image" content={headImage ?? process.env.AVATAR} />
+          <meta property="og:image" content={headImage ?? siteAvatar} />
           <meta property="og:type" content="article" />
           <meta property="og:url" content={document.URL} />
           <meta
