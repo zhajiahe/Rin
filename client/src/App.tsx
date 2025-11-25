@@ -74,7 +74,7 @@ function App() {
     }
     ref.current = true
   }, [])
-  const favicon = process.env.API_URL ? `${process.env.API_URL}/favicon` : '/favicon.png';
+  const favicon = '/favicon.png';
   return (
     <>
       <ClientConfigContext.Provider value={config}>
